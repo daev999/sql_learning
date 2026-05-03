@@ -1,74 +1,80 @@
-\---
+---
 
+## SELECT DISTINCT Challenge
 
-
-\## SELECT DISTINCT Challenge
-
-
-
-\### Problem
-
-
+### Problem
 
 Find the unique rental rates from the `film` table.
 
+### My Approach
 
+* I identified the column: `rental_rate`
+* I noticed there were duplicate values
+* I used `SELECT DISTINCT` to return only unique values
 
-\### My Approach
-
-
-
-\* I identified the column: `rental\_rate`
-
-\* I noticed there were duplicate values
-
-\* I used `SELECT DISTINCT` to return only unique values
-
-
-
-\### SQL Query
-
-
+### SQL Query
 
 ```sql
-
-SELECT DISTINCT rental\_rate
-
+SELECT DISTINCT rental_rate
 FROM film;
-
 ```
 
+### Result
 
+* 0.99
+* 2.99
+* 4.99
 
-\### Result
+### What I Learned
 
+* `DISTINCT` removes duplicate values
+* It helps answer questions like “what unique values exist?”
+* Always think in terms of the business question first
 
+### Screenshot
 
-\* 0.99
+![SELECT DISTINCT Result](images/select_distinct_result.png)
 
-\* 2.99
+---
 
-\* 4.99
+## SELECT WHERE Challenges
 
+### Challenge 1
 
+Find the email of customer Nancy Thomas.
 
-\### What I Learned
+```sql
+SELECT email 
+FROM customer
+WHERE first_name = 'Nancy' AND last_name = 'Thomas';
+```
 
+![Result](images/where_challenge1.png)
 
+---
 
-\* `DISTINCT` removes duplicate values
+### Challenge 2
 
-\* It helps answer questions like “what unique values exist?”
+Get the description of the movie "Outlaw Hanky".
 
-\* Always think in terms of the business question first
+```sql
+SELECT title, description 
+FROM film
+WHERE title = 'Outlaw Hanky';
+```
 
+![Result](images/where_challenge2.png)
 
+---
 
-\### Screenshot
+### Challenge 3
 
+Find the phone number of the customer at '259 Ipoh Drive'.
 
+```sql
+SELECT phone 
+FROM address
+WHERE address = '259 Ipoh Drive';
+```
 
-!\[SELECT DISTINCT Result](images/select\_distinct\_result.png)
-
-
-
+![Result](images/where_challenge3.png)
