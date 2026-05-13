@@ -1,80 +1,51 @@
 ---
 
-## SELECT DISTINCT Challenge
+## ORDER BY and LIMIT Challenges
 
-### Problem
+### Challenge 1: First 10 Paying Customers
 
-Find the unique rental rates from the `film` table.
+#### Business Problem
 
-### My Approach
+We want to reward our first 10 paying customers.
 
-* I identified the column: `rental_rate`
-* I noticed there were duplicate values
-* I used `SELECT DISTINCT` to return only unique values
+#### SQL Query
 
-### SQL Query
-
-```sql
-SELECT DISTINCT rental_rate
-FROM film;
+```sql id="n5rqgu"
+SELECT customer_id
+FROM payment
+ORDER BY payment_date ASC
+LIMIT 10;
 ```
 
-### Result
+#### What I Learned
 
-* 0.99
-* 2.99
-* 4.99
+* `ORDER BY` sorts results
+* `ASC` sorts from oldest to newest
+* `LIMIT` controls the number of rows returned
 
-### What I Learned
+---
 
-* `DISTINCT` removes duplicate values
-* It helps answer questions like “what unique values exist?”
-* Always think in terms of the business question first
+### Challenge 2: Shortest Movies by Runtime
+
+#### Business Problem
+
+Find the 10 shortest movies a customer can watch during a short break.
+
+#### SQL Query
+
+```sql id="qzx67t"
+SELECT title, length
+FROM film
+ORDER BY length ASC
+LIMIT 10;
+```
+
+#### What I Learned
+
+* `ORDER BY length ASC` sorts movies from shortest to longest
+* `LIMIT 10` returns only 10 rows
+* `ORDER BY` and `LIMIT` work very well together
 
 ### Screenshot
 
-![SELECT DISTINCT Result](images/select_distinct_result.png)
-
----
-
-## SELECT WHERE Challenges
-
-### Challenge 1
-
-Find the email of customer Nancy Thomas.
-
-```sql
-SELECT email 
-FROM customer
-WHERE first_name = 'Nancy' AND last_name = 'Thomas';
-```
-
-![Result](images/where_challenge1.png)
-
----
-
-### Challenge 2
-
-Get the description of the movie "Outlaw Hanky".
-
-```sql
-SELECT title, description 
-FROM film
-WHERE title = 'Outlaw Hanky';
-```
-
-![Result](images/where_challenge2.png)
-
----
-
-### Challenge 3
-
-Find the phone number of the customer at '259 Ipoh Drive'.
-
-```sql
-SELECT phone 
-FROM address
-WHERE address = '259 Ipoh Drive';
-```
-
-![Result](images/where_challenge3.png)
+![Shortest Movies Result](images/shortest_movies_result.png)
