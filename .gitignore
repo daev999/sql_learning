@@ -28,3 +28,6 @@ Thumbs.db
 
 # Cached data
 .cache
+
+# Windows system file
+desktop.ini
