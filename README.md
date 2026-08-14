@@ -25,7 +25,7 @@ FROM film;
 - 4.99
 
 ### Screenshot
-![SELECT DISTINCT Result](select_distinct_result.png)
+![SELECT DISTINCT Result](images/select_distinct_result.png)
 
 ### What I Learned
 - `DISTINCT` removes duplicate values
@@ -46,7 +46,7 @@ WHERE first_name = 'Nancy' AND last_name = 'Thomas';
 ```
 
 ### Screenshot
-![WHERE Challenge 1](where_challenge1.png)
+![WHERE Challenge 1](images/where_challenge1.png)
 
 ---
 
@@ -60,7 +60,7 @@ WHERE title = 'Outlaw Hanky';
 ```
 
 ### Screenshot
-![WHERE Challenge 2](where_challenge2.png)
+![WHERE Challenge 2](images/where_challenge2.png)
 
 ---
 
@@ -74,7 +74,7 @@ WHERE address = '259 Ipoh Drive';
 ```
 
 ### Screenshot
-![WHERE Challenge 3](where_challenge3.png)
+![WHERE Challenge 3](images/where_challenge3.png)
 
 ---
 
@@ -102,7 +102,7 @@ LIMIT 5;
 5 movies, each **46 minutes** long.
 
 ### Screenshot
-![Shortest Movies Result](shortest_movies_result.png)
+![Shortest Movies Result](images/shortest_movies_result.png)
 
 ### What I Learned
 - `ORDER BY column ASC` sorts from smallest to largest (ASC is actually the default)
